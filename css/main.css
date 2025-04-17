@@ -44,10 +44,10 @@
  }
 
  .container {
-    max-width: 1585px;
+    max-width: 1690px;
     /* max-width: 1890px; */
     width: 100%;
-    padding: 0 95px;
+    padding: 0 150px;
     /* padding: 0 200px; */
     margin: 0 auto;
  }
@@ -157,7 +157,8 @@
 } 
 .box-container {    
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 48px 40px;
   }
 
