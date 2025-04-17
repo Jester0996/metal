@@ -45,6 +45,7 @@
 
  .container {
     max-width: 1585px;
+    /* max-width: 1890px; */
     width: 100%;
     padding: 0 95px;
     /* padding: 0 200px; */
@@ -227,16 +228,12 @@
    margin: 0 auto;
    display: block;
   object-fit: contain;
-    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      /* Плавное преобразование */
-      will-change: transform;
-      /* Оптимизация анимации */
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
  }
 
- /* Варианты анимации при наведении */
  .box:hover .box-img {
    transform: scale(1.05);
-   /* Базовое увеличение */
  }
 
  .box-item-left{
