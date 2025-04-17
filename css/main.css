@@ -1,4 +1,4 @@
- /* BAZA */
+/* BAZA */
  * {
    margin: 0;
    padding: 0;
@@ -44,24 +44,23 @@
  }
 
  .container {
-  max-width: 1890px;
+    max-width: 1585px;
     width: 100%;
     padding: 0 95px;
     /* padding: 0 200px; */
     margin: 0 auto;
  }
 
-
-/* header */
+/* --- header ----*/
 .header {
   padding: 32px 0;
 }
 
 .nav-menu {
-    max-width: 525px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  max-width: 525px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nav-list {
@@ -92,27 +91,18 @@
 }
 
 /*---HOME---*/
-
-.home-wrapper {}
-
 .home-title {
   font-weight: 600;
   font-size: 36px;
   line-height: 133%;
   color: #000
-  
 }
-
 .home-input {
   display: flex;
   gap: 24px;
   padding-top: 32px;
   padding-bottom: 41px;
 }
-
-.home-input--item {
-}
-
 .home-input--item p{
   padding-left: 16px;
   padding-bottom: 6px;
@@ -124,20 +114,20 @@
 }
 .home-input--item button {
   position: relative;
-    width: 288px;
-    height: 40px;
+  width: 288px;
+  height: 40px;
   text-align: left;
   padding-left: 16px;
-      background: rgb(242, 242, 242);
-      color: rgb(0, 0, 0);
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 150%;
-    letter-spacing: 3%;
-    text-align: left;
-    border: none;
-    outline: none;
-    transition: all 0.3s ease-in;
+  background: rgb(242, 242, 242);
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 3%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: all 0.3s ease-in;
 }
 
 .home-input--item button::after {
@@ -149,93 +139,75 @@
   height: 24px;
   background-image: url(../img/chevron-bottom.svg);
   transition: transform 0.3s ease-in;
-
 }
-/* перемещение стрелки вниз */
 
+/* перемещение стрелки вниз */
 .home-input--item button::after {
   transition: all 0.3s ease;
 }
-
 .home-input--item button:hover::after {
   top: 35%;
 }
 
-
 /*CARD*/
-
-/* .main__cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 48px 40px;
-}
-
-.home .box-container .box img {
-  width: 238px;
-  height: 237px;
-  object-fit: cover;
-}
-
-
-
-.home .box-container .box {
-  align-items: center;
-  
-  border: 1px solid #eee;
-  width: 336px;
-  height: 352px;
-  padding: 9px 12px 10px;
-}
-
-.box-item-right img {
-  width: 21px;
-  height: 21px;
-  margin-left: 10px;
-}
-
-.old-price {
-  color: #828282;
-  text-decoration: line-through;
-}
- */
-
- /* Header стили остаются без изменений */
-
- /* HOME */
- /* .main__cards {
-   display: grid;
-   grid-template-columns: repeat(4, 1fr);
-   gap: 48px;
- } */
 
 .home{
   margin-bottom: 103px;
 } 
 .box-container {    
-  
     display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      /* grid-template-columns: repeat(4, 1fr); */
-    /* grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 48px 40px;
-
-    
   }
 
  .box {
-position: relative;
-   border: 1px solid #eee;
-    padding: 9px 12px 10px;
-   width: 100%;
-      /* height: 352px; */
-        display: flex;
-          flex-direction: column;
+  position: relative;
+  border: 1px solid #eee;
+  padding: 9px 12px 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+  transition: all 0.3s ease;
  }
+
+.box {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.box:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.box-inner h2{
+  position: relative;
+  padding-top: 6px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000;
+}
+.box-inner--x::before{
+  position: absolute;
+  content: 'L422WH';
+  top: -16px;
+  left: 0;
+  height: 15px;
+  width: 45px;
+
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #888;
+}
 
 .box__link-item{
   position: absolute;
-   top: 8px;
-   left: 0;
+  top: 8px;
+  left: 0;
   padding: 3px 16px;
   background-color: var(--background-red);
   font-size: 14px;
@@ -243,8 +215,9 @@ position: relative;
   letter-spacing: 0.01em;
   color: var(--body-background);
   width: 81px;
-    height: 24px;
-
+  height: 24px;
+  animation: pulse 1.5s infinite;
+  z-index: 1;
  }
 
  .box-img {
@@ -254,52 +227,59 @@ position: relative;
    margin: 0 auto;
    display: block;
   object-fit: contain;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      /* Плавное преобразование */
+      will-change: transform;
+      /* Оптимизация анимации */
+ }
+
+ /* Варианты анимации при наведении */
+ .box:hover .box-img {
+   transform: scale(1.05);
+   /* Базовое увеличение */
  }
 
  .box-item-left{
   display: flex;
   gap: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: #000;
  }
-
-
-
  .box-inner-item {
    display: flex;
    justify-content: space-between;
    align-items: left;
-   margin-top: 15px;
+   margin-top: 10px;
  }
-
  .box-item-right img {
    width: 21px;
    height: 21px;
    margin-left: 10px;
-  /* transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); */
    animation: pulse 1.5s infinite;
  }
 
-    /* .box-item-right img:hover{
-      transform: translateY(-50%)  scale(0.9);
-    } */
- 
+.box-item-right img[alt="heart"] {
+  transition: filter 0.3s ease-in;
+}
 
- /* 4. Постоянная пульсация */
-
-
+.box-item-right img[alt="heart"]:hover {
+  filter: invert(16%) sepia(89%) saturate(6054%) hue-rotate(358deg) brightness(97%) contrast(113%);
+}
+ /* Постоянная пульсация */
  @keyframes pulse {
    0% {
-     transform: translateY(-50%) scale(1);
+     transform: scale(1);
    }
-
    50% {
-     transform: translateY(-50%) scale(1.1);
+     transform: scale(1.1);
    }
-
    100% {
-     transform: translateY(-50%) scale(1);
+     transform:  scale(1);
    }
  }
-
  .price-old {
    color: #828282;
    text-decoration: line-through;
@@ -307,14 +287,13 @@ position: relative;
 
  /* Адаптивность */
 @media (max-width: 1200px) {
-      .main__cards {
-        grid-template-columns: repeat(3, 1fr);
-      }
-
-      .container {
-        padding: 0 100px;
-      }
-    }
+  .main__cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .container {
+    padding: 0 100px;
+  }
+}
 
 @media (max-width: 992px) {
   .container {
@@ -332,25 +311,21 @@ position: relative;
   .container {
     padding: 0 20px;
   }
-
   .home-input--item button {
     width: 200px;
   }
  }
-
  @media (max-width: 420px) {
   .nav-list {
       flex-wrap: wrap;
     }
-  
-    .home-input--item {
-      width: 100%;
-    }
-  
-    .home-input--item button {
-      width: 100%;
-    }
-   .main__cards {
-     grid-template-columns: 1fr;
-   }
+  .home-input--item {
+    width: 100%;
+  }
+  .home-input--item button {
+    width: 100%;
+  }
+  .main__cards {
+    grid-template-columns: 1fr;
+  }
  }
